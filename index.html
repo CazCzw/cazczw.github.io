@@ -123,10 +123,10 @@
       background: rgba(255,255,255,0.05);
       border-radius: 12px;
       transition: transform 0.3s ease;
-      height: 140px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      display: grid;
+      grid-template-rows: auto auto;
+      align-items: center;
+      height: 120px;
     }
 
     .feature-card:hover {
@@ -152,6 +152,11 @@
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
       color: #daa520;
+    }
+
+    .feature-card p {
+      margin: 0;
+      line-height: 1.4;
     }
 
     .floating {
@@ -250,15 +255,15 @@
   <section class="features">
     <div class="feature-card">
       <h2>Charleston's Finest</h2>
-      <p>Serving the Lowcountry with distinction</p>
+      <p>Luxury service since 1995</p>
     </div>
     <div class="feature-card">
       <h2>Professional Service</h2>
-      <p>Experienced chauffeurs and pristine vehicles</p>
+      <p>Expert chauffeurs available</p>
     </div>
     <div class="feature-card">
-      <h2>Always Available</h2>
-      <p>24/7 service for all your transportation needs</p>
+      <h2>24/7 Availability</h2>
+      <p>Ready when you need us</p>
     </div>
   </section>
 
