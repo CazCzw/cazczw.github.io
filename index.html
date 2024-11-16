@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Co's Limo Service</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+      color: white;
+      min-height: 100vh;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #fff, #b8860b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1920x1080/?luxury,limousine') center/cover;
+      filter: brightness(0.3);
+      z-index: -1;
+    }
+
+    .booking-form {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(20px);
+      padding: 2rem;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      font-size: 1rem;
+    }
+
+    button {
+      background: linear-gradient(45deg, #b8860b, #daa520);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .feature-card {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #fff, #daa520);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: #daa520;
+      font-style: italic;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #daa520;
+    }
+
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">Co's Limo Service</div>
+    <div style="display: flex; gap: 2rem;">
+      <a href="#" style="color: white; text-decoration: none;">Our Fleet</a>
+      <a href="#" style="color: white; text-decoration: none;">Services</a>
+      <a href="#" style="color: white; text-decoration: none;">About Us</a>
+      <a href="#" style="color: white; text-decoration: none;">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="booking-form">
+      <h1>Co's Limo Service</h1>
+      <div class="tagline">Where Luxury Meets Reliability</div>
+      
+      <div class="form-grid">
+        <div>
+          <select>
+            <option>Select Pickup Location</option>
+            <option>San Francisco Airport (SFO)</option>
+            <option>Oakland Airport (OAK)</option>
+            <option>San Jose Airport (SJC)</option>
+            <option>Hotel</option>
+            <option>Custom Address</option>
+          </select>
+        </div>
+        <div>
+          <select>
+            <option>Select Destination</option>
+            <option>San Francisco Airport (SFO)</option>
+            <option>Oakland Airport (OAK)</option>
+            <option>San Jose Airport (SJC)</option>
+            <option>Hotel</option>
+            <option>Custom Address</option>
+          </select>
+        </div>
+        <div>
+          <input type="datetime-local" placeholder="Pickup Date & Time">
+        </div>
+        <div>
+          <select>
+            <option>Select Vehicle Type</option>
+            <option>Executive Sedan</option>
+            <option>Luxury SUV</option>
+            <option>Classic Stretch Limousine</option>
+            <option>Mercedes Sprinter</option>
+          </select>
+        </div>
+      </div>
+      
+      <button class="floating">Reserve Your Ride</button>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <h2>Bay Area's Finest</h2>
+      <p>Serving the entire Bay Area with distinction since 1995</p>
+    </div>
+    <div class="feature-card">
+      <h2>Professional Service</h2>
+      <p>Experienced chauffeurs and immaculate vehicles</p>
+    </div>
+    <div class="feature-card">
+      <h2>Available 24/7</h2>
+      <p>Airport transfers and special events any time, day or night</p>
+    </div>
+  </section>
+
+  <script>
+    gsap.from('.booking-form', {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      ease: 'power3.out'
+    });
+
+    gsap.from('.feature-card', {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.features',
+        start: 'top center'
+      }
+    });
+  </script>
+</body>
+</html>
