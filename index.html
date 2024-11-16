@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Co's Limo Service</title>
+  <title>Co's Limo Service - Charleston</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <style>
     * {
@@ -55,7 +55,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1920x1080/?luxury,limousine') center/cover;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/random/1920x1080/?charleston,luxury') center/cover;
       filter: brightness(0.3);
       z-index: -1;
     }
@@ -106,17 +106,22 @@
 
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 4rem 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding: 2rem;
       background: rgba(0,0,0,0.5);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      backdrop-filter: blur(10px);
     }
 
     .feature-card {
       text-align: center;
-      padding: 2rem;
+      padding: 1.5rem;
       background: rgba(255,255,255,0.05);
-      border-radius: 15px;
+      border-radius: 12px;
       transition: transform 0.3s ease;
     }
 
@@ -140,7 +145,7 @@
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-bottom: 0.5rem;
       color: #daa520;
     }
@@ -153,6 +158,22 @@
       0% { transform: translateY(0px); }
       50% { transform: translateY(-20px); }
       100% { transform: translateY(0px); }
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        grid-template-columns: 1fr;
+        position: static;
+        padding: 1rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .tagline {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
@@ -170,26 +191,32 @@
   <section class="hero">
     <div class="booking-form">
       <h1>Co's Limo Service</h1>
-      <div class="tagline">Where Luxury Meets Reliability</div>
+      <div class="tagline">Charleston's Premier Luxury Transportation</div>
       
       <div class="form-grid">
         <div>
           <select>
             <option>Select Pickup Location</option>
-            <option>San Francisco Airport (SFO)</option>
-            <option>Oakland Airport (OAK)</option>
-            <option>San Jose Airport (SJC)</option>
-            <option>Hotel</option>
+            <option>Charleston Int'l Airport (CHS)</option>
+            <option>Downtown Charleston</option>
+            <option>Isle of Palms</option>
+            <option>Folly Beach</option>
+            <option>Mount Pleasant</option>
+            <option>Sullivan's Island</option>
+            <option>North Charleston</option>
             <option>Custom Address</option>
           </select>
         </div>
         <div>
           <select>
             <option>Select Destination</option>
-            <option>San Francisco Airport (SFO)</option>
-            <option>Oakland Airport (OAK)</option>
-            <option>San Jose Airport (SJC)</option>
-            <option>Hotel</option>
+            <option>Charleston Int'l Airport (CHS)</option>
+            <option>Downtown Charleston</option>
+            <option>Isle of Palms</option>
+            <option>Folly Beach</option>
+            <option>Mount Pleasant</option>
+            <option>Sullivan's Island</option>
+            <option>North Charleston</option>
             <option>Custom Address</option>
           </select>
         </div>
@@ -213,8 +240,8 @@
 
   <section class="features">
     <div class="feature-card">
-      <h2>Bay Area's Finest</h2>
-      <p>Serving the entire Bay Area with distinction since 1995</p>
+      <h2>Charleston's Finest</h2>
+      <p>Serving the Lowcountry with distinction</p>
     </div>
     <div class="feature-card">
       <h2>Professional Service</h2>
@@ -222,7 +249,7 @@
     </div>
     <div class="feature-card">
       <h2>Available 24/7</h2>
-      <p>Airport transfers and special events any time, day or night</p>
+      <p>Airport transfers and special events any time</p>
     </div>
   </section>
 
