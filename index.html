@@ -123,14 +123,20 @@
       background: rgba(255,255,255,0.05);
       border-radius: 12px;
       transition: transform 0.3s ease;
-      display: grid;
-      grid-template-rows: auto auto;
-      align-items: center;
-      height: 120px;
+      height: 100px;
     }
 
-    .feature-card:hover {
-      transform: translateY(-5px);
+    .feature-card h2 {
+      font-size: 1.3rem;
+      color: #daa520;
+      margin: 0 0 8px 0;
+      line-height: 1.2;
+    }
+
+    .feature-card p {
+      margin: 0;
+      line-height: 1.2;
+      font-size: 1rem;
     }
 
     h1 {
@@ -146,17 +152,6 @@
       margin-bottom: 2rem;
       color: #daa520;
       font-style: italic;
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: #daa520;
-    }
-
-    .feature-card p {
-      margin: 0;
-      line-height: 1.4;
     }
 
     .floating {
@@ -254,16 +249,16 @@
 
   <section class="features">
     <div class="feature-card">
-      <h2>Charleston's Finest</h2>
-      <p>Luxury service since 1995</p>
+      <h2>Luxury Service</h2>
+      <p>Premier transportation</p>
     </div>
     <div class="feature-card">
-      <h2>Professional Service</h2>
-      <p>Expert chauffeurs available</p>
+      <h2>Professional</h2>
+      <p>Expert chauffeurs</p>
     </div>
     <div class="feature-card">
-      <h2>24/7 Availability</h2>
-      <p>Ready when you need us</p>
+      <h2>Always Ready</h2>
+      <p>24/7 availability</p>
     </div>
   </section>
 
